@@ -14,10 +14,12 @@ node.js 7.0以上版本
 
 - 路由
 - 模版
-- api(无限制的 /users/1)
-- api(限制的 /users/profile)
+- 静态文件
 - session
+- flash 见 /session，/upload
 - 文件上传
-- 请求验证 /session，/upload，/users/:id
+- 请求验证 见 /session，/upload，/users/:id
 - csrf(Content-Type: application/x-www-form-urlencoded) 见 POST /session
 - csrf(Content-Type: multipart/form-data) 见 POST /upload
+- api(无限制的 /users/1)
+- api(限制的 /users/profile)
