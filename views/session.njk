@@ -1,0 +1,26 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+    {% if flash.message %}<div class="message">{{ flash.message }}</div>{% endif %}
+
+    <form method="POST" action="/session">
+        {% include "csrf.njk" %}
+        <div>
+            <label>username: <input type="text" name="username"></label>
+            {% if flash.username %}
+                <div class="message">{{ flash.username }}</div>
+            {% endif %}
+        </div>
+
+        <div>
+            <label>password: <input type="password" name="password"></label>
+            {% if flash.password %}
+                <div class="message">{{ flash.password }}</div>
+            {% endif %}
+        </div>
+        <div>
+            <input type="submit" value="login">
+        </div>
+    </form>
+{% endblock %}

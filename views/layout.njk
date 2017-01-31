@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+<div>
+    <h2>api: 返回json</h2>
+    <div>随便访问的api：<a href="/users/1">user1</a></div>
+    <br>
+    <div>登录才能访问的api：<a href="/users/profile" id="">profile</a></div>
+    <br>
+
+    <div>user:hj pass:1</div>
+
+    <h2>页面：返回html</h2>
+    {% if user %}
+        <h3>当前已登录</h3>
+        <div><a href="/">首页</a></div>
+        <div>用户名：{{ user.username }}  <a href="/session/destroy" id="logout">logout</a></div>
+    {% else %}
+        <h3>当前未登录</h3>
+        <div><a href="/">首页</a></div>
+        <div><a href="/session">登录</a></div>
+    {% endif %}
+
+    <div>
+        <a href="/upload">上传文件</a>
+    </div>
+    <br>
+
+</div>
+
+<h2>页面内容：</h2>
+
+{% block content %}
+{% endblock %}
+
+<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+{#<script src="js/layout.js"></script>#}
+
+{% block script %}
+{% endblock %}
+</body>
+</html>

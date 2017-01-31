@@ -1,0 +1,20 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+    {% if flash.message %} <div class="message">{{ flash.message }}</div> {% endif %}
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    {% include "csrf.njk" %}
+    <div>
+        <label>title: <input type="text" name="title"></label>
+        {% if flash.title %} <div class="message">{{ flash.title }}</div> {% endif %}
+    </div>
+
+    <div>
+        <label>select file: <input type="file" name="file"></label>
+        {% if flash.file %} <div class="message">{{ flash.file }}</div> {% endif %}
+    </div>
+
+    <input type="submit" value="upload">
+</form>
+{% endblock %}
