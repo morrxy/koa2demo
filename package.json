@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development DEBUG=* ./node_modules/.bin/nodemon --harmony_async_await bin/www.js"
+    "dev": "NODE_ENV=development DEBUG=app:* ./node_modules/.bin/nodemon --harmony_async_await bin/www.js",
+    "pm2dev": "DEBUG=app:* pm2 start config/pm2dev.json",
+    "pm2test": "DEBUG=app:* pm2 start config/pm2test.json",
+    "pm2prod": "pm2 start config/pm2prod.json"
   },
   "author": "",
   "license": "ISC",

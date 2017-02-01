@@ -8,7 +8,7 @@ const session = require('koa-session-minimal')
 // const redisStore = require('koa-redis')
 const faviocn = require('koa-favicon')
 const convert = require('koa-convert')
-const debug = require('debug')('app:')
+const debug = require('debug')('app:app')
 
 convert(require('koa-validate'))(app)
 

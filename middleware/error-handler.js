@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('errorHandler')
+const debug = require('debug')('app:errorHandler')
 
 module.exports = async (ctx, next) => {
   try {

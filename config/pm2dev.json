@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "development",
+      "script": "bin/www.js",
+      "node_args": ["--harmony_async_await"],
+      "env": { "NODE_ENV": "development"},
+      "watch": true,
+      "ignore_watch": ["node_modules", "uploads", "idea"]
+    }
+  ]
+}

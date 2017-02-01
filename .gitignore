@@ -4,4 +4,4 @@ uploads/*
 !uploads/.gitkeep
 *.log
 .env*
-!.env.example
+!env/.env.example

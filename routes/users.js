@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('koa-router')()
-const debug = require('debug')('user')
+const debug = require('debug')('app:user')
 const uniformData = require('../middleware/uniform-data')
 const userDB = [{ id: 1, name: "Hu" }, { id: 2, name: "Jun" }]
 

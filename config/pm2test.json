@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "test",
+      "script": "bin/www.js",
+      "node_args": ["--harmony_async_await"],
+      "env": { "NODE_ENV": "test"},
+      "exec_mode": "cluster",
+      "instances": 0
+    }
+  ]
+}
