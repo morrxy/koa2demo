@@ -10,7 +10,7 @@ const fs = require('fs')
 const body = require('koa-body')({
   multipart: true,
   formidable: {
-    uploadDir: './uploads',
+    uploadDir: process.env.uploadDir || require('../config/default').uploadDir,
     keepExtensions: true
   }
 })
