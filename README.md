@@ -6,6 +6,8 @@ node.js 7.0以上版本
 
 `npm install`
 
+把`env`目录下的`.env.development.example`改名成`env.development`
+
 ## 运行
 
 `npm run dev`
